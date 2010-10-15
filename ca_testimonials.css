@@ -1,0 +1,14 @@
+div.view-testimonials-page div.views-row {
+  border-top:1px solid #EEE;
+  margin-top:10px;
+}
+
+div.view-testimonials-page div.views-row-first {
+  border-top:none;
+  margin-top:0;
+}
+
+div.ca-testimonials-right {
+  float:right;
+  text-align:right;
+}

@@ -1,0 +1,32 @@
+<?php
+
+function ca_testimonials_schema() {
+  $schema['ca_testimonials_weight'] = array(
+    'description' => 'An accounting of ca_testimonial nodes individual weights',
+    'fields' => array(
+      'nid' => array(
+        'description' => 'The primary identifier for a node.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ),
+      'weight' => array(
+        'description' => 'ca testimonials node type weight.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'size' => 'tiny',
+      ),
+    ),
+    'primary key' => array('nid'),
+  );
+  return $schema;
+}
+
+function ca_testimonials_install() {
+  drupal_install_schema('ca_testimonials');
+}
+
+function ca_testimonials_uninstall() {
+  drupal_uninstall_schema('ca_testimonials');
+}
